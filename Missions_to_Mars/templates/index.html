@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <div clas="container">
+    <div class="jumbotron text-center">
+      <h1>Check in on Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Click here for Mars Live Data!</a></p>
+    </div>
+    <!-- surf data -->
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h3>Mars Scraped Data</h3>
+        <h3>{{ mars["Latest Mars News Title"] }}</h3>
+        <p>{{ mars["Latest Mars News"] }}</p>
+        <p></p>
+        <p></p>
+        <h3>Current Weather on Mars</h3>
+        <p>{{ mars["Latest Mars Weather"] }}</p>
+        <h3>Mars Fun Facts!</h3>
+        <p>{{ mars["Mars Fun Facts"] | safe }}</p>
+        <h3>Stratesphere Pictures</h3>
+        <p>{{ mars.Mars_Current_Weather }}</p>
+        {% for image in mars["Mars Hemispheres"] %}
+        <img src="{{ image['image_url'] }}" >
+        <p> {{ image['title'] }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
