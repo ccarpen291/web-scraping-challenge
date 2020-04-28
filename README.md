@@ -15,5 +15,4 @@ Was on the first table, so we just had to call table 0 as it was the first table
 Finally, we pulled a few different images and really just saved the html of those images where the image is being saved on the website
 and we are just using our website as a repeater
 
-This homework was very challenging.  I'm glad that Justin was available to help, without him I would have been lost.
 
